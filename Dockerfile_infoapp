@@ -1,0 +1,8 @@
+FROM python:3.12.6
+RUN pip3 install pywebio
+
+WORKDIR /app
+COPY info-app.py /app
+
+EXPOSE 8585
+CMD ["python3", "info-app.py"]
